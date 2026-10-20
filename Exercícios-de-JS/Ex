@@ -1,1 +1,74 @@
+/**
+ * Exercicios de Algoritmos em JavaScript
+ */
 
+//Exercicio 1, Olá mundo
+console.log("Ex1.Olá, Mundo!");
+
+//Exercicio 2, Somar dois números
+let num1 = 5 
+    num2 = 5
+console.log("Ex2.A soma de " + num1 + " e " + num2 + " é igual á " + (num1+num2));
+
+//Exercicio 3, Verifica se um número é par
+
+let numero1 = 12;
+if (numero1 % 2 == 0)
+{
+    console.log("Ex3.Número par");
+}
+else
+{
+    console.log("Ex3.Número ímpar");
+}
+
+//Exercicio 4, Calcular a média de notas do aluno
+
+let nota1 = 8, nota2 = 7.5, nota3 = 5, nota4 = 6.5;
+media = (nota1+nota2+nota3+nota4) / 4;
+console.log("Ex4.A média de notas do aluno é: " + media + " pontos.");
+
+//Exercicio 5, Exibir números de 1 a 20
+
+console.log("Ex5.");
+for (let i = 1; i <= 20; i++)
+{
+    console.log(i);
+}
+
+//Exercicio 6, Gerar a tabuada de um número
+
+let numero = 7;
+console.log("Ex6.");
+for (let i = 1; i <= 10; i++)
+{
+    console.log(`${numero} x ${i} = ${numero * i}`);
+}
+
+//Exercicio 7, Calcular o fatorial de um número
+
+console.log("Ex7.");
+let numBasefatorial = 5, fatorial = 1;
+for (let i = 1; i <= numBasefatorial; i++)
+{
+    fatorial *= i;
+}
+console.log("O fatorial de " + numBasefatorial + " é igual a", fatorial);
+
+//Exercicio 8, Encontrar o maior de três números
+
+let numEx81 = 15, numEx82 = 27, numEx83 = 12;
+let maiorDeTres = Math.max(numEx81, numEx82, numEx83);
+console.log("Ex8. O maior dos três números é igual a", maiorDeTres);
+
+//Exercicio 9, Inverter uma String 
+
+let texto = "JavaScript";
+let textoInvertido = texto.split('').reverse().join('');
+console.log("Ex9. A palavra " + texto + " invertida é", textoInvertido);
+
+//Exercicio 10, Verificar se uma palavra é um palíndromo
+
+let palavra = "arara";
+let palindromo = palavra.split('').reverse().join('');
+console.log("Ex10.A palavra " + palavra + " é um palíndromo? (invertido)? ", palavra === palindromo);
