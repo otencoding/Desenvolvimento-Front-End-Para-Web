@@ -72,3 +72,155 @@ console.log("Ex9. A palavra " + texto + " invertida é", textoInvertido);
 let palavra = "arara";
 let palindromo = palavra.split('').reverse().join('');
 console.log("Ex10.A palavra " + palavra + " é um palíndromo? (invertido)? ", palavra === palindromo);
+
+//Ex11
+console.log("-----------");
+console.log("Exercicios 11");
+console.log("-----------");
+function calcularQuadrado(numero)
+{
+    return numero * numero;
+}
+for (let i = 0; i<=20; i++)
+{
+    console.log("o quadrado de " + i + ": " + calcularQuadrado(i));
+}
+
+//Ex12
+
+console.log("---------");
+console.log("Exercicios: 12");
+console.log("---------");
+let lista_de_elementos = [2, 4, 6, 8, 10, 12];
+let somaNumerosArray = 0;
+
+for (let i = 0; i < 6; i++)
+{
+    somaNumerosArray += lista_de_elementos[i];
+}
+
+console.log(somaNumerosArray);
+
+//Ex13
+
+console.log("---------");
+console.log("Exercicios: 13");
+console.log("---------");
+let lista_ex13= [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+let pares = lista_ex13.filter(num => num%2===0);
+console.log(pares);
+
+//Ex14
+
+console.log("---------");
+console.log("Exercicicios: 14");
+console.log("---------");
+let lista_ex14 = ["Ana", "Bruno", "Carlos", "Daniela", "Eduardo"];
+for (let nome of lista_ex14)
+{
+    console.log(nome);
+}
+
+//Equivalente ao lista_ex14
+
+for(let i=0; i < lista_ex14.length; i++)
+{
+    console.log(lista_ex14[i]);
+}
+
+//Ex15
+
+console.log("---------");
+console.log("Exercicicios: 15");
+console.log("---------");
+let lista_ex15 = ["Helena", "Rayka", "Jean", "Kevin", "Davi"];
+let busca = "Kevin";
+for (let nomes of lista_ex15)
+{
+    if ( nomes === busca)
+    {
+        console.log("O nome " + nomes + " foi encontrado");
+    }
+}
+console.log(lista_ex15.includes(busca));
+
+//Ex16
+
+console.log("---------");
+console.log("Exercicicios: 16");
+console.log("---------");
+let lista_ex16 = [7, 3, 5, 2, 14, 30, 4, 9, 1];
+
+console.log("Lista desordenada");
+console.log(lista_ex16);
+
+lista_ex16.sort((a, b) => a - b);
+console.log("lista ordenada");
+console.log(lista_ex16);
+
+//Ex17
+console.log("---------");
+console.log("Exercicicios: 17");
+console.log("---------");
+function todosIndices(vetor, num)
+{
+    let indice = [];
+    for(let i = 0; i < vetor.length; i++)
+    {
+        if(vetor[i] === num)
+        {
+            indice.push[i];
+        }
+    }
+    return indice;
+}
+console.log(todosIndices([1, 2, 3, 5, 2, 8, 4]), 2);
+
+//Ex18
+console.log("---------");
+console.log("Exercicicios: 18");
+console.log("---------");
+function serieFibonacci(num)
+{
+    let fibo = [0, 1];
+    while(fibo.length < num)
+    {
+        fibo.push(fibo[fibo.length - 1] + fibo[fibo.length - 2]);
+    }
+    return fibo.slice(0, num);
+}
+console.log(serieFibonacci(20));
+
+//Ex19
+console.log("---------");
+console.log("Exercicicios: 19");
+console.log("---------");
+function criarTabuleiro()
+{
+    let tabuleiro = [];
+    for(let i = 0; i < 3; i++)
+    {
+        tabuleiro [i] = [" "," "," "];
+    }
+    return tabuleiro;
+}
+function marcar (tabuleiro, linha, coluna, jogador)
+{
+    if (tabuleiro[linha][coluna] === "")
+    {
+        tabuleiro[linha][coluna] = jogador;
+        return true;
+    }
+    return false;
+}
+function exibirTabuleiro(tabuleiro)
+{
+    for (let i = 0; i < 3; i++)
+    {
+        console.log(tabuleiro[i].join(" | "));
+    }
+}
+
+let tabuleiro = criarTabuleiro(); marcar(tabuleiro, 1, 1, "X");
+                exibirTabuleiro(tabuleiro);
+
